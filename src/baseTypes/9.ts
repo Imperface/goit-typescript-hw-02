@@ -2,10 +2,17 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 type Common = {
-  [key: string]: number | string | string[] | { [key: string]: Date };
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string;
+  details: {
+    createAt: Date;
+    updateAt: Date;
+  };
 };
 
-const page1: Common = {
+const page1: Partial<Common> = {
   title: "The awesome page",
   likes: 100,
   accounts: ["Max", "Anton", "Nikita"],
@@ -16,7 +23,7 @@ const page1: Common = {
   },
 };
 
-const page2: Common = {
+const page2: Partial<Common> = {
   title: "Python or Js",
   likes: 5,
   accounts: ["Alex"],
