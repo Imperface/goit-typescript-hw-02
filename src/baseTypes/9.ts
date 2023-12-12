@@ -6,13 +6,13 @@ type Common = {
   likes: number;
   accounts: string[];
   status: string;
-  details: {
+  details?: {
     createAt: Date;
     updateAt: Date;
   };
 };
 
-const page1: Partial<Common> = {
+const page1: Common = {
   title: "The awesome page",
   likes: 100,
   accounts: ["Max", "Anton", "Nikita"],
@@ -23,7 +23,7 @@ const page1: Partial<Common> = {
   },
 };
 
-const page2: Partial<Common> = {
+const page2: Common = {
   title: "Python or Js",
   likes: 5,
   accounts: ["Alex"],
